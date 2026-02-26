@@ -1,0 +1,12 @@
+Kubernetes Deployment Guidelines:
+
+- All production deployments must use Helm charts.
+- Containers must run as non-root users.
+- Resource limits (CPU and memory) are mandatory for all pods.
+- Auto scaling pods must be done using HPA.
+- Secrets must be stored using Kubernetes Secrets or an external secrets manager.
+- Rolling updates should be used instead of recreating pods by using only dx console.
+- Must use an approved CRQ for production deployments.
+
+
+Failure to follow these guidelines may result in deployment rejection.
